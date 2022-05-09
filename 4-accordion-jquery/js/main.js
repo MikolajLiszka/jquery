@@ -1,13 +1,11 @@
-$(document).ready(function() {
-    $('.accordion-title-one').click(function(){
-        $('.accordion-content-one').slideToggle(2000);
-    })
-
-    $('.accordion-title-two').click(function(){
-        $('.accordion-content-two').slideToggle(2000);
-    })
-
-    $('.accordion-title-three').click(function(){
-        $('.accordion-content-three').slideToggle(1000);
-    })
-})
+$(document).ready(function () {
+  $(".accordion-item").click(function () {
+    if ($(this).hasClass("slided")) {
+      $(this).removeClass("slided");
+      $(this).find(".accordion-content").slideUp(500);
+    } else {
+      $(this).find(".accordion-content").slideDown(500);
+      $(this).addClass("slided");
+    }
+  });
+});
